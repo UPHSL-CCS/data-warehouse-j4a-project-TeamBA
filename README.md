@@ -72,6 +72,84 @@ A local retail company wants to analyze sales performance across products, store
 
 ---
 
+## ETL Process
+
+> **Note:** This ETL process is subject to change based on actual dataset structure and project requirements.
+
+### Extract
+**Data Sources:**
+- **Custom Dataset** - Team will create/collect our own retail sales dataset
+  - Point of Sale (POS) transaction records
+  - Product inventory information
+  - Store and location details
+  - Customer purchase data (if applicable)
+
+**Dataset Creation Methods:**
+- Manual data collection from real/simulated retail scenarios
+- Synthetic data generation using Mockaroo/Faker.js
+- Public retail datasets (Kaggle, etc.) as reference/baseline
+- CSV/Excel files prepared by the team
+
+**Extraction Methods:**
+- CSV/JSON file uploads to cloud storage
+- Direct file import to BigQuery
+- Database connections (PostgreSQL/MySQL) if needed
+- API integrations using n8n workflows for automation
+
+### Transform
+**Data Cleaning & Transformation:**
+- Remove duplicates and handle missing values
+- Standardize date/time formats
+- Normalize product categories and store names
+- Calculate derived metrics:
+  - Total sales amount (quantity × price)
+  - Profit margins
+  - Sales trends (daily, weekly, monthly)
+- Data type conversions
+- Currency standardization
+
+**Data Enrichment:**
+- Add time dimensions (day, week, month, quarter, year)
+- Categorize products by type, brand, price range
+- Geographic data for stores (region, city)
+- Customer segmentation
+
+**Tools Used:**
+- n8n for workflow orchestration
+- Python (pandas) for complex transformations
+- SQL for data manipulation
+
+### Load
+**Target: Google BigQuery Data Warehouse**
+
+**Loading Strategy:**
+- Incremental loads for daily transactions
+- Full refresh for dimension tables (products, stores, customers)
+- Partitioning by date for transaction tables
+- Clustering by store_id and product_id for query optimization
+
+**Data Warehouse Schema:**
+- **Fact Table:** Sales transactions
+- **Dimension Tables:**
+  - Products (product_id, name, category, price)
+  - Stores (store_id, name, location, region)
+  - Customers (customer_id, name, segment)
+  - Time (date, day, month, quarter, year)
+
+**Optimization Techniques:**
+- Table partitioning by transaction_date
+- Clustering on frequently queried columns
+- Materialized views for common aggregations
+- Scheduled refresh strategies
+
+**Note:** The ETL process design is flexible and will be refined based on:
+- Actual dataset characteristics and size
+- Data quality and completeness
+- Performance testing results
+- BigQuery best practices discovered during implementation
+
+---
+
 ## Project Timeline
 
 ### Midterm Deliverables (October 22, 2025)
@@ -105,7 +183,7 @@ This ensures the project is feasible within a student budget while meeting all t
 
 ---
 
-## 📚 Resources
+## Resources
 
 - [Google BigQuery Sandbox (Free)](https://cloud.google.com/bigquery/docs/sandbox)
 - [n8n Documentation](https://docs.n8n.io/)
