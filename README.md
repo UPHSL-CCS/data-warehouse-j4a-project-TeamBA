@@ -2,7 +2,7 @@
 
 # Data Warehouse Optimization Project - TeamBA
 
-## 📋 Project Overview
+## Project Overview
 
 **Project Title:** Retail Sales Performance Analytics  
 **Course:** Data Warehousing (J4A)  
@@ -21,7 +21,7 @@ A local retail company wants to analyze sales performance across products, store
 
 ---
 
-## 👥 Team Members - TeamBA
+## Team Members - TeamBA
 
 1. **Mark Anthony Hernandez**
 2. **Al Jorome Gonzaga**
@@ -30,7 +30,7 @@ A local retail company wants to analyze sales performance across products, store
 
 ---
 
-## 🛠️ Preferred Tools & Technologies
+## Preferred Tools & Technologies
 
 ### Data Warehousing & Analytics
 - **Google BigQuery** - Cloud data warehouse (Free tier/Student credits available)
@@ -72,7 +72,7 @@ A local retail company wants to analyze sales performance across products, store
 
 ---
 
-## 📅 Project Timeline
+## Project Timeline
 
 ### Midterm Deliverables (October 22, 2025)
 - [x] Repository setup
@@ -87,7 +87,7 @@ A local retail company wants to analyze sales performance across products, store
 
 ---
 
-## 📝 Notes
+## Notes
 
 All tools selected are either:
 - Free and open-source
@@ -97,7 +97,7 @@ All tools selected are either:
 
 This ensures the project is feasible within a student budget while meeting all technical requirements.
 
-**⚠️ Note:** This plan and tool selection is open to changes based on:
+**Note:** This plan and tool selection is open to changes based on:
 - Project requirements evolution
 - Technical feasibility testing
 - Team feedback and collaboration
